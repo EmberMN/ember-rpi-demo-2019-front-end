@@ -1,1 +1,9 @@
 @import 'ember-paper';
+
+.led-on {
+  background-color: red !important;
+}
+
+.led-off {
+  background-color: white !important;
+}

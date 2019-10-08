@@ -1,1 +1,5 @@
-{{outlet}}
+<div class="layout-column layout-align-space-around-center">
+  <div class="flex">LED ({{if isLEDOn "On" "Off"}})</div>
+  <div class="flex"><PaperButton @raised={{false}} @fab={{true}} @class={{if isLEDOn "led-on" "led-off"}} @label="" {{on "click" (action "toggleLED")}}/></div>
+  {{!outlet}}
+</div>
