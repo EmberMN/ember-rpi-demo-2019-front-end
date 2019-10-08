@@ -1,6 +1,6 @@
 import Service, { inject as service } from '@ember/service';
 import { later } from '@ember/runloop';
-import { htmlSafe, SafeString } from '@ember/string';
+import { htmlSafe } from '@ember/string';
 const escapeExpression = Ember.Handlebars.Utils.escapeExpression;
 
 import $ from 'jquery'; // TODO: replace need for $.Callbacks
@@ -161,6 +161,7 @@ export default class RPi extends Service {
     }
   }
 
+  /*
   async getFile(path) {
     log('getFile called', path);
     const promise = this.waitForResponse('getFile');
@@ -176,6 +177,7 @@ export default class RPi extends Service {
     }
     return base64;
   }
+ */
 
   triggerDownload(name, base64contents, type = "text/plain") {
     const a = document.getElementById('download-anchor');
