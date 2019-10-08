@@ -161,7 +161,7 @@ export default class RPi extends Service {
     }
   }
 
-  async getFile(path: string) {
+  async getFile(path) {
     log('getFile called', path);
     const promise = this.waitForResponse('getFile');
     await this.send({ command: 'getFile', path });
